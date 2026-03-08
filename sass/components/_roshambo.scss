@@ -2,21 +2,11 @@
 @use "../utils/variables" as *;
 
 .roshambo {
-  padding-top: 40px;
-  padding-bottom: 36px;
+  padding: 36px 0;
+  position: relative;
 
-  &__wrapped {
-    max-width: max-content;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
   &__title {
     @include title;
-    text-align: center;
-    margin-top: 0;
-    margin-top: 0;
-    margin-bottom: 40px;
   }
 
   &__btns {
@@ -24,7 +14,6 @@
     gap: 38px;
     justify-content: center;
     align-items: center;
-    position: relative;
     flex-wrap: wrap;
   }
 
@@ -39,20 +28,10 @@
   &__result {
     @include text;
     text-align: center;
-    margin-top: 39px;
-    margin-bottom: 37px;
+    margin: 39px 0 37px 0;
   }
 
-  &__computer-result {
-    display: block;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    background-color: $primary-color;
-    @include text(12px, $secondary-color);
-  }
-
-  &__btn-reset {
+  &__btn-action {
     display: block;
     padding: 10px 20px;
     border-radius: 20px;
@@ -63,18 +42,14 @@
 
   &__calc {
     @include text;
+    line-height: 170%;
     position: absolute;
-    right: -150px;
-    top: 70px;
+    right: 125px;
+    top: 93px;
   }
 }
 
-@media (max-width: 696px) {
-  .roshambo__calc {
-    right: -80px;
-  }
-}
-@media (max-width: 556px) {
+@media (max-width: 768px) {
   .roshambo__calc {
     position: static;
     display: block;

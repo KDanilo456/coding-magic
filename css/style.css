@@ -170,63 +170,48 @@
     display: none;
   }
 }
-.leap-calculator {
-  padding-top: 36px;
-  padding-bottom: 36px;
+.leap-calc {
+  padding: 36px 0;
   max-width: 576px;
   margin: 0 auto;
 }
-.leap-calculator__title {
+.leap-calc__title {
   font-weight: 400;
   font-size: 16px;
-  color: #000000;
   text-align: center;
-  margin-bottom: 37px;
-  margin-top: 0;
+  color: #000000;
+  margin: 0 0 38px 0;
 }
 
 .guess-number {
+  padding: 36px 0;
   max-width: 576px;
   margin: 0 auto;
-  padding-top: 36px;
-  padding-bottom: 38px;
 }
 .guess-number__title {
   font-weight: 400;
   font-size: 16px;
-  color: #000000;
   text-align: center;
-  margin-top: 0;
-  margin-top: 0;
-  margin-bottom: 40px;
+  color: #000000;
+  margin: 0 0 38px 0;
 }
 
 .roshambo {
-  padding-top: 40px;
-  padding-bottom: 36px;
-}
-.roshambo__wrapped {
-  max-width: -moz-max-content;
-  max-width: max-content;
+  padding: 36px 0;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
 }
 .roshambo__title {
   font-weight: 400;
   font-size: 16px;
-  color: #000000;
   text-align: center;
-  margin-top: 0;
-  margin-top: 0;
-  margin-bottom: 40px;
+  color: #000000;
+  margin: 0 0 38px 0;
 }
 .roshambo__btns {
   display: flex;
   gap: 38px;
   justify-content: center;
   align-items: center;
-  position: relative;
   flex-wrap: wrap;
 }
 .roshambo__btn {
@@ -241,20 +226,9 @@
   font-weight: 400;
   color: #000000;
   text-align: center;
-  margin-top: 39px;
-  margin-bottom: 37px;
+  margin: 39px 0 37px 0;
 }
-.roshambo__computer-result {
-  display: block;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background-color: #000000;
-  font-size: 12px;
-  font-weight: 400;
-  color: #FFFFFF;
-}
-.roshambo__btn-reset {
+.roshambo__btn-action {
   display: block;
   padding: 10px 20px;
   border-radius: 20px;
@@ -268,17 +242,13 @@
   font-size: 12px;
   font-weight: 400;
   color: #000000;
+  line-height: 170%;
   position: absolute;
-  right: -150px;
-  top: 70px;
+  right: 125px;
+  top: 93px;
 }
 
-@media (max-width: 696px) {
-  .roshambo__calc {
-    right: -80px;
-  }
-}
-@media (max-width: 556px) {
+@media (max-width: 768px) {
   .roshambo__calc {
     position: static;
     display: block;
@@ -296,7 +266,9 @@
 .calc__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 37px;
@@ -369,7 +341,9 @@
 .time-calc__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 37px;
@@ -391,7 +365,9 @@
 .dino-game__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
 }
 .dino-game__wrapped {
@@ -478,7 +454,9 @@
 .football__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 37px;
@@ -505,7 +483,9 @@
 .max-number__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 37px;
@@ -545,7 +525,9 @@
 .team__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 37px;
@@ -629,7 +611,9 @@
 .scientists__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-bottom: 37px;
 }
@@ -801,18 +785,20 @@ li {
 .title {
   font-weight: 400;
   font-size: 24px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   text-align: center;
   margin-top: 36px;
   margin-bottom: 37px;
 }
 
-.game-calc {
+.input-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.game-calc__input {
+.input-action__input {
   padding: 10px 45px 10px 10px;
   height: 35px;
   background-color: #D7D7D7;
@@ -824,7 +810,7 @@ li {
   color: #000000;
   width: 215px;
 }
-.game-calc__btn {
+.input-action__btn {
   width: 35px;
   height: 35px;
   background-color: #000000;
@@ -837,23 +823,23 @@ li {
   right: 0;
   border: none;
 }
-.game-calc__form {
+.input-action__form {
   display: flex;
   position: relative;
 }
-.game-calc__result {
+.input-action__result {
   font-size: 12px;
   font-weight: 400;
   color: #000000;
   margin: 0;
 }
-.game-calc__input--narrow {
+.input-action__input--narrow {
   width: 150px;
 }
-.game-calc__time-input {
+.input-action__time-input {
   width: 150px;
 }
-.game-calc--center {
+.input-action--center {
   justify-content: center;
 }
 
@@ -916,7 +902,9 @@ li {
 .modal__title {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #000000;
+  margin: 0 0 38px 0;
   margin: 0;
   position: absolute;
   top: 87px;
@@ -996,7 +984,7 @@ li {
 }
 
 @media (max-width: 490px) {
-  .game-calc {
+  .input-action {
     flex-direction: column;
     gap: 35px;
   }
