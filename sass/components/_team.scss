@@ -1,0 +1,87 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.team {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin: 0 auto;
+
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+  }
+
+  &__item {
+    height: auto;
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: $bg-input-color;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent
+  }
+
+  &__name {
+    @include text(14px);
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    @include text;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__indicator {
+    width: 18px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $bg-input-color;
+    transition-duration: 0.1s;
+  }
+
+  &__active {
+    width: 30px;
+    background-color: #797979;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 514px) {
+  .team__body {
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+  }
+}

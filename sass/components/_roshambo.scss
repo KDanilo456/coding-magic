@@ -1,0 +1,86 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.roshambo {
+  padding-top: 40px;
+  padding-bottom: 36px;
+
+  &__wrapped {
+    max-width: max-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    background-color: $primary-color;
+  }
+
+  &__result {
+    @include text;
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 37px;
+  }
+
+  &__computer-result {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: $primary-color;
+    @include text(12px, $secondary-color);
+  }
+
+  &__btn-reset {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: $primary-color;
+    @include text(12px, $secondary-color);
+  }
+
+  &__calc {
+    @include text;
+    position: absolute;
+    right: -150px;
+    top: 70px;
+  }
+}
+
+@media (max-width: 696px) {
+  .roshambo__calc {
+    right: -80px;
+  }
+}
+@media (max-width: 556px) {
+  .roshambo__calc {
+    position: static;
+    display: block;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+}

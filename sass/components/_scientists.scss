@@ -1,0 +1,102 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.scientists {
+  padding-top: 38px;
+  padding-bottom: 58px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    gap: 50px;
+    justify-content: center;
+  }
+  &__title {
+    @include title;
+    text-align: center;
+    margin-bottom: 37px;
+  }
+  &__item {
+    width: 100px;
+    height: 100px;
+    background-color: $bg-input-color;
+    border-radius: 20px;
+    @include text(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btns {
+    margin-top: 36px;
+  }
+
+  &__btn-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 20px;
+    @include text(12px,$secondary-color);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+    text-align: start;
+  }
+
+  &__btn--right {
+    margin-left: auto;
+  }
+
+  &__btn--center {
+    margin: 0 auto;
+    max-width: max-content;
+  }
+
+  &__btn--higher {
+    min-height: 50px;
+    text-align: start;
+  }
+
+  &__active {
+    border: 2px solid $win-color;
+  }
+
+  &__hidden {
+    opacity: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .scientists {
+    &__btn-list {
+      grid-template-columns: auto;
+    }
+
+    &__btn--right {
+      margin-left: 0;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width:664px) {
+  .scientists__list {
+    grid-template-columns: 100px 100px 100px;
+  }
+}
+
+@media (max-width:480px) {
+  .scientists__list {
+    grid-template-columns: 100px 100px;
+  }
+}

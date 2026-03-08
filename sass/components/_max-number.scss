@@ -1,0 +1,33 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.max-number {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin: 0 auto;
+
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 38px;
+  }
+  &__input {
+    @include input(20px,20px);
+    @include text;
+    max-width: 135px;
+  }
+  &__result {
+    @include text;
+    margin-top: 36px;
+    text-align: center;
+  }
+}

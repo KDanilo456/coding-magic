@@ -1,0 +1,16 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.guess-number {
+  max-width: 576px;
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-bottom: 38px;
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}

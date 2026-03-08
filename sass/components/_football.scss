@@ -1,0 +1,29 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.football {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  &__body {
+    max-width: 720px;
+    height: 220px;
+    width: 100%;
+    border: 2px solid $primary-color;
+    background-color: #5ABB58;
+    border-radius: 37px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  &__img {
+    position: absolute;
+  }
+}
+

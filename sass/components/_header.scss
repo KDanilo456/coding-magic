@@ -1,0 +1,186 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  &__logo {
+    margin-right: 80px;
+  }
+
+  &__user {
+    @include text;
+  }
+
+  &__user-management {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+.burger-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  display: none;
+  &__line {
+    width: 90%;
+    height: 3px;
+    background-color: $primary-color;
+  }
+}
+
+.theme-switcher {
+  width: 40px;
+  min-height: 20px;
+  border-radius: 11px;
+  background-color: #7a7a7a;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+
+  &__icon-wrapped {
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 1);
+    background-color: $secondary-color;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &--mobile {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+  }
+
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  background-color: $secondary-color;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 55%;
+  padding: 15px;
+  overflow: auto;
+  z-index: 100;
+  
+
+  &__btn-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    @include text(28px);
+  }
+}
+
+.burger-active {
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.nav {
+
+  &--mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50%;
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+    position: relative;
+
+    &--mobile {
+      flex-direction: column;
+      gap: 105px;
+    }
+  }
+
+  &__link {
+    @include text;
+  }
+  &__link-icon {
+    margin-left: 8px;
+  }
+
+  &__dropdown {
+    width: 160px;
+    height: 105px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid $primary-color;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    left: -30px;
+    overflow: hidden;
+  }
+
+  &__dropdown-link {
+    @include text;
+    padding: 10px 48px;
+    height: 35px;
+    background-color: $secondary-color;
+    
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+
+  &__dropdown--active {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav--desktop {
+    display: none;
+  }
+  .burger-btn {
+    display: flex;
+  }
+  .theme-switcher--mobile {
+    display: block;
+  }
+  .theme-switcher--desktop {
+    display: none;
+  }
+  .header__user-management {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    margin-right: 0;
+  }
+  .header__theme-switcher {
+    display: none;
+  }
+}

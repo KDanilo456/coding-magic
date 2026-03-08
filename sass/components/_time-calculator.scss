@@ -1,0 +1,27 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+
+.time-calc {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin: 0 auto;
+  &__title {
+    @include title;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  &__body {
+    justify-content: center;
+    gap: 33px;
+    flex-wrap: wrap;
+  }
+  
+}
+
+@media (max-width: 490px) {
+  .time-calc__icon {
+    display: none;
+  }
+}
