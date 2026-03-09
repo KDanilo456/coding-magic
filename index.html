@@ -236,9 +236,7 @@
             <span class="roshambo__calc">
               Рахунок: <br />
               Комп’ютер -
-              <span class="js-roshambo-computer"
-                >0</span
-              >
+              <span class="js-roshambo-computer">0</span>
               <br />
               Ви -
               <span class="js-roshambo-user">0</span>
@@ -258,12 +256,12 @@
             </div>
           </section>
 
-          <!--
           <div class="decor-line"></div>
+
           <section class="calc" data-name="numerical">
             <h2 class="calc__title">Калькулятор</h2>
 
-            <div class="calc__form">
+            <form class="calc__form">
               <input
                 type="text"
                 placeholder="Введіть число"
@@ -271,10 +269,10 @@
                 data-action="first-value"
               />
               <div class="calc__operations">
-                <button class="calc__btn js-calc-btn">+</button>
-                <button class="calc__btn js-calc-btn">*</button>
-                <button class="calc__btn js-calc-btn">-</button>
-                <button class="calc__btn js-calc-btn">/</button>
+                <button class="calc__btn js-calc-btn" type="button">+</button>
+                <button class="calc__btn js-calc-btn" type="button">*</button>
+                <button class="calc__btn js-calc-btn" type="button">-</button>
+                <button class="calc__btn js-calc-btn" type="button">/</button>
               </div>
               <input
                 type="text"
@@ -286,9 +284,10 @@
               <div class="calc__result js-calc-result">
                 <span>Результат</span>
               </div>
-            </div>
+            </form>
           </section>
 
+          <!--
           <div class="decor-line"></div>
           <section class="time-calc" data-name="numerical">
             <h2 class="time-calc__title">Калькулятор часу</h2>
@@ -654,6 +653,7 @@
     <script type="module" src="js/leap-calc.js"></script>
     <script type="module" src="js/guess-num.js"></script>
     <script type="module" src="js/roshambo.js"></script>
+    <script type="module" src="js/calc.js"></script>
 
   </body>
 </html>

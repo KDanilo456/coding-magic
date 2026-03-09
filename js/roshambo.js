@@ -6,11 +6,10 @@ const roshamboCalcUser = document.querySelector(".js-roshambo-user");
 const roshamboBtnReset = document.querySelector(".js-roshambo-reset");
 
 let computerResult;
-let roshamboResultText;
 
 roshamboBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    computerResult = roshamboBtns[Math.floor(Math.random() * 3)];
+    computerResult = roshamboBtns[Math.floor(Math.random() * roshamboBtns.length)];
 
     if (
       (computerResult.dataset.action === "stone" &&
@@ -37,7 +36,7 @@ roshamboBtns.forEach((btn) => {
 
 roshamboComputerResult.addEventListener("click", () => {
   if (computerResult === undefined) {
-    roshamboResult.textContent = `Спершу нажміть на одну з кнопок зверху`;
+    return (roshamboResult.textContent = `Спершу нажміть на одну з кнопок зверху`);
   }
 
   if (computerResult.dataset.action === "stone") {
@@ -62,4 +61,5 @@ roshamboBtnReset.addEventListener("click", () => {
   roshamboResult.textContent = "Клацніть на кнопку зверху";
   roshamboCalcUser.textContent = 0;
   roshamboCalcComputer.textContent = 0;
+  computerResult = undefined;
 });

@@ -2,13 +2,10 @@
 @use "../utils/variables" as *;
 
 .calc {
-  padding-top: 35px;
-  padding-bottom: 36px;
+  padding: 36px 0;
+
   &__title {
     @include title;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 37px;
   }
 
   &__form {
@@ -16,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 38px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
 
   &__input {
@@ -32,18 +29,17 @@
     border-radius: 20px;
     width: 118px;
     height: 35px;
-    overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
     @include text;
 
-    &::-webkit-scrollbar{
-      display: none;
-    }
+    // &::-webkit-scrollbar{
+    //   display: none;
+    // }
   }
 
   &__operations {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     gap: 10px;
   }
 
@@ -63,6 +59,6 @@
   }
 }
 
-.is-active {
+.calc-active {
   border: 2px solid $win-color;
 }
