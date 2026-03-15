@@ -94,39 +94,7 @@ btnCloseBurgerMenu.addEventListener("click", () => {
 
 
 
-let timeInput = document.querySelector("#time-input");
-let timeBtn = document.querySelector("#time-btn");
-let timeResult = document.querySelector("#time-result");
-let timeInputValue;
 
-timeBtn.addEventListener("click", () => {
-  if (timeInput.value.length === 0) {
-    return (timeResult.textContent = "введіть число в поле");
-  }
-
-  if (isNaN(timeInput.value)) {
-    return (timeResult.textContent = "введіть число в поле");
-  }
-
-  timeInputValue = Number(timeInput.value);
-
-  let days = 0;
-  let hours = Math.floor(timeInputValue / 60);
-  let minutes = timeInputValue % 60;
-  let countDays;
-
-  if (hours >= 24) {
-    countDays = Math.floor(hours / 24);
-    hours -= countDays * 24;
-    days += countDays;
-  }
-
-  if (days >= 1) {
-    return (timeResult.textContent = `${days} дн. ${hours} год ${minutes} хв`);
-  }
-
-  timeResult.textContent = `${hours} год ${minutes} хв`;
-});
 
 let footbalArea = document.querySelector("#football-area");
 let ball = document.querySelector("#ball");

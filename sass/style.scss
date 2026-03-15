@@ -2,7 +2,7 @@
 @use "./components/leap-calculator";
 @use "./components/guess-number";
 @use "./components/roshambo";
-@use "./components/calculator.scss";
+@use "./components/calс.scss";
 @use "./components/time-calculator";
 @use "./components/dino-game";
 @use "./components/football";
@@ -38,8 +38,6 @@ ul {
 li {
   list-style: none;
 }
-
-
 
 .main {
   background-image: url(/img/bg-image.png);
@@ -94,16 +92,18 @@ li {
     margin: 0;
   }
 
+  &--center {
+    justify-content: center;
+    gap: 33px;
+    flex-wrap: wrap;
+  }
+
   &__input--narrow {
     width: 150px;
   }
 
-  &__time-input {
+  &__input--time {
     width: 150px;
-  }
-
-  &--center {
-    justify-content: center;
   }
 }
 
@@ -119,10 +119,10 @@ li {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color:#00000033;
+  background-color: #00000033;
   top: 50%;
   left: 50%;
-  transform: translate( -50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 110;
   display: none;
 
@@ -140,7 +140,7 @@ li {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -158,7 +158,7 @@ li {
     position: absolute;
     left: 50%;
     top: 59%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 0;
     width: 378px;
     height: 106px;
@@ -195,13 +195,13 @@ li {
   }
 
   &__input {
-    @include input(10px,80px);
+    @include input(10px, 80px);
     @include text;
     max-width: 169px;
   }
 
   &__btn {
-    @include text(12px,$secondary-color);
+    @include text(12px, $secondary-color);
     background-color: $primary-color;
     border: none;
     border-radius: 20px;
@@ -222,7 +222,7 @@ li {
     row-gap: 45px;
     grid-template-columns: 30px 30px;
     justify-content: space-between;
-    position: absolute; 
+    position: absolute;
     margin: 0;
     z-index: 0;
   }

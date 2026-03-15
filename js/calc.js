@@ -1,83 +1,98 @@
-let calcInputs = document.querySelectorAll(".js-calc-input");
-let calcOperations = document.querySelectorAll(".js-calc-btn");
-let calcResult = document.querySelector(".js-calc-result");
-let calcTotal = document.querySelector(".js-calc-total");
+const calcFirstInput = document.querySelector(".js-first-input");
+const calcSecondInput = document.querySelector(".js-second-input");
 
-let firstInputValue;
-let secondInputValue;
+const calcOperations = document.querySelectorAll(".js-calc-operation");
+
+const calcBtnTotal = document.querySelector(".js-btn-total");
+
+const calcBtnReset = document.querySelector(".js-calc-reset");
+
+const calcResult = document.querySelector(".js-calc-result");
+
 let operation;
 
-calcInputs.forEach((input) => {
-  input.addEventListener("input", () => {
-    if (input.dataset.action === "first-value") {
-      firstInputValue = Number(input.value);
+const validateInputs = (input) => {
+  input.value = input.value.replace(/\s+/g, "");
+
+  if (input.value === "" || isNaN(input.value)) {
+    input.style.border = "1px solid #990000";
+    return false;
+  } else {
+    input.style.border = "none";
+    return true;
+  }
+};
+
+calcOperations.forEach((btnOperation) => {
+  btnOperation.addEventListener("click", () => {
+    const activeOperation = document.querySelector(".calc-active");
+
+    if (activeOperation) {
+      activeOperation.classList.remove("calc-active");
     }
-    if (input.dataset.action === "second-value") {
-      secondInputValue = Number(input.value);
-    }
+
+    btnOperation.classList.add("calc-active");
+
+    operation = btnOperation.textContent;
   });
 });
 
-// calcOperations.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     btn.classList.add("calc-active");
+calcBtnTotal.addEventListener("click", () => {
+  calcOperations.forEach(
+    (btnOperation) => (btnOperation.style.border = "none"),
+  );
 
-//     // if (btn.classList.contains("is-active")) {
-//     //   btn.classList.add("is-active");
-//     // } else {
-//     //   btn.classList.remove("is-active");
-//     // }
+  const validateFirstInput = validateInputs(calcFirstInput);
+  const validateSecondInput = validateInputs(calcSecondInput);
 
-//     return (operation = btn.textContent);
-//   });
-// });
+  if (!validateFirstInput && !validateSecondInput) {
+    calcResult.textContent = "заповніть поля числами";
+    return;
+  } else if (!validateFirstInput || !validateSecondInput) {
+    calcResult.textContent = "заповніть поле числом";
+    return;
+  }
 
-document.addEventListener('click', event => {
-    
-    const btnOperation = event.target.closest('.js-calc-btn');
+  if (operation === "/" && calcSecondInput.value === "0") {
+    calcSecondInput.style.border = "1px solid #990000";
+    calcResult.textContent = "на нуль ділити не можна";
+    return;
+  }
 
-    if (!btnOperation) return;
+  switch (operation) {
+    case "+":
+      calcResult.textContent =
+        Number(calcFirstInput.value) + Number(calcSecondInput.value);
+      break;
+    case "-":
+      calcResult.textContent =
+        Number(calcFirstInput.value) - Number(calcSecondInput.value);
+      break;
+    case "*":
+      calcResult.textContent =
+        Number(calcFirstInput.value) * Number(calcSecondInput.value);
+      break;
+    case "/":
+      calcResult.textContent =
+        Number(calcFirstInput.value) / Number(calcSecondInput.value);
+      break;
+    default:
+      calcResult.textContent = "виберіть операцію";
+      calcOperations.forEach(
+        (btnOperation) => (btnOperation.style.border = "1px solid #990000"),
+      );
+  }
+});
 
-    const activeOperation = document.querySelector()
-    
-})
-
-calcTotal.addEventListener("click", () => {
-  calcInputs.forEach((input) => {
-    if (input.dataset.action === "first-value" && input.value === "") {
-      firstInputValue = undefined;
-    }
-
-    if (input.dataset.action === "second-value" && input.value === "") {
-      secondInputValue = undefined;
-    }
-
-    if (input.value === "" || isNaN(input.value)) {
-      input.style.border = "1px solid red";
-    } else {
-      input.style.border = "none";
-    }
+calcBtnReset.addEventListener("click", () => {
+  calcFirstInput.value = "";
+  calcFirstInput.style.border = "none";
+  calcSecondInput.value = "";
+  calcSecondInput.style.border = "none";
+  operation = "";
+  calcResult.textContent = "Результат";
+  calcOperations.forEach((btnOperation) => {
+    btnOperation.style.border = "none";
+    btnOperation.classList.remove("calc-active");
   });
-
-  if (operation === "+") {
-    calcResult.textContent = firstInputValue + secondInputValue;
-  } else if (operation === "-") {
-    calcResult.textContent = firstInputValue - secondInputValue;
-  } else if (operation === "*") {
-    calcResult.textContent = firstInputValue * secondInputValue;
-  } else if (operation === "/") {
-    calcResult.textContent = firstInputValue / secondInputValue;
-  } else {
-    calcResult.textContent = "виберіть операцію";
-  }
-
-  if (operation === undefined) {
-    calcOperations.forEach((btn) => (btn.style.border = "1px solid red"));
-  } else {
-    calcOperations.forEach((btn) => (btn.style.border = "none"));
-  }
-
-  if (calcResult.textContent.includes("NaN")) {
-    return (calcResult.textContent = "введіть число");
-  }
 });

@@ -3,6 +3,8 @@ const guessNumInput = document.querySelector(".js-guess-input");
 const guessNumResult = document.querySelector(".js-guess-result");
 
 guessNumBtn.addEventListener("click", () => {
+  guessNumInput.value = guessNumInput.value.replace(/\s+/g, "");
+  
   const currentNumber = Math.floor(Math.random() * 10);
 
   if (isNaN(guessNumInput.value) || guessNumInput.value.length === 0) {

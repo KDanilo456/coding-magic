@@ -265,79 +265,82 @@
               <input
                 type="text"
                 placeholder="Введіть число"
-                class="calc__input js-calc-input"
+                class="calc__input js-first-input"
                 data-action="first-value"
               />
-              <div class="calc__operations">
-                <button class="calc__btn js-calc-btn" type="button">+</button>
-                <button class="calc__btn js-calc-btn" type="button">*</button>
-                <button class="calc__btn js-calc-btn" type="button">-</button>
-                <button class="calc__btn js-calc-btn" type="button">/</button>
+              <div class="calc__operations js-calc-operations">
+                <button class="calc__btn js-calc-operation" type="button">+</button>
+                <button class="calc__btn js-calc-operation" type="button">*</button>
+                <button class="calc__btn js-calc-operation" type="button">-</button>
+                <button class="calc__btn js-calc-operation" type="button">/</button>
               </div>
               <input
                 type="text"
                 placeholder="Введіть число"
-                class="calc__input js-calc-input"
+                class="calc__input js-second-input"
                 data-action="second-value"
               />
-              <button class="calc__btn js-calc-total">=</button>
-              <div class="calc__result js-calc-result">
-                <span>Результат</span>
+              <button class="calc__btn js-btn-total" type="button">=</button>
+              <div class="calc__result">
+                <span class="calc__result-text js-calc-result">Результат</span>
               </div>
-            </form>
+              <button class="calc__btn js-calc-reset" type="button">Скинути</button>
+            </form> 
           </section>
 
-          <!--
           <div class="decor-line"></div>
+
           <section class="time-calc" data-name="numerical">
             <h2 class="time-calc__title">Калькулятор часу</h2>
 
-            <div class="game-calc time-calc__body game-calc--center">
-              <div class="game-calc__form">
+            <div class="input-action input-action--center">
+              <form class="input-action__form">
                 <input
                   type="text"
-                  class="game-calc__input game-calc__time-input"
-                  id="time-input"
+                  class="input-action__input input-action__input--time js-time-input"
                   placeholder="Введіть число"
                 />
 
-                <button class="game-calc__btn" id="time-btn">
-                  <svg width="16" height="16" class="game-calc__icon">
+                <button class="input-action__btn js-time-btn" type="button">
+                  <svg width="16" height="16" class="input-action__icon">
                     <use href="/symbols.svg#dandruff"></use>
                   </svg>
                 </button>
-              </div>
+              </form>
 
               <svg width="100" height="1" class="time-calc__icon">
                 <use href="/symbols.svg#line"></use>
               </svg>
 
-              <p class="game-calc__result" id="time-result">введіть число</p>
+              <p class="input-action__result js-time-result">введіть число</p>
             </div>
           </section>
 
+          
           <div class="decor-line"></div>
 
           <section class="dino-game" data-name="game">
             <h2 class="dino-game__title">Google динозавр</h2>
 
             <div class="dino-game__wrapped">
-              <div class="dino-game__body">
-                <span class="dino-game__score">0</span>
-                <svg class="dino-game__svg" width="50" height="50">
+              <div class="dino-game__body js-dino-body">
+                <span class="dino-game__score js-dino-score">0</span>
+                <svg class="dino-game__svg js-dino" width="50" height="50">
                   <use href="/symbols.svg#dino"></use>
                 </svg>
 
                 <img
                   src="/img/cactus.png"
                   alt="cactus"
-                  class="dino-game__cactus"
+                  class="dino-game__cactus js-cactus"
                 />
 
-                <button type="button" class="dino-game__btn">Почати</button>
+                <button type="button" class="dino-game__btn js-dino-btn">Почати</button>
               </div>
             </div>
           </section>
+
+          <!--
 
           <div class="decor-line"></div>
           <section class="football" data-name="game">
@@ -654,6 +657,8 @@
     <script type="module" src="js/guess-num.js"></script>
     <script type="module" src="js/roshambo.js"></script>
     <script type="module" src="js/calc.js"></script>
+    <script type="module" src="js/time-calc.js"></script>
+    <script type="module" src="js/dino.js"></script>
 
   </body>
 </html>

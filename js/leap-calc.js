@@ -3,6 +3,8 @@ let leapCalcInput = document.querySelector(".js-leap-input");
 let leapCalcResult = document.querySelector(".js-leap-result");
 
 leapCalcBtn.addEventListener("click", () => {
+  leapCalcInput.value = leapCalcInput.value.replace(/\s+/g, "");
+  
   if (isNaN(leapCalcInput.value) || leapCalcInput.value.length === 0) {
     leapCalcResult.style.color = "black";
     return (leapCalcResult.textContent = "введіть число");

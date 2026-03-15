@@ -29,12 +29,19 @@
     border-radius: 20px;
     width: 118px;
     height: 35px;
+    overflow-y: hidden;
     overflow-x: auto;
+    position: relative;
     @include text;
 
-    // &::-webkit-scrollbar{
-    //   display: none;
-    // }
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  &__result-text {
+    width: max-content;
+    position: absolute;
   }
 
   &__operations {
@@ -60,5 +67,6 @@
 }
 
 .calc-active {
-  border: 2px solid $win-color;
+  transition-duration: 0.2s;
+  transform: scale(1.2);
 }

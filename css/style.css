@@ -295,10 +295,20 @@
   border-radius: 20px;
   width: 118px;
   height: 35px;
+  overflow-y: hidden;
   overflow-x: auto;
+  position: relative;
   font-size: 12px;
   font-weight: 400;
   color: #000000;
+}
+.calc__result::-webkit-scrollbar {
+  display: none;
+}
+.calc__result-text {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
 }
 .calc__operations {
   display: grid;
@@ -322,12 +332,13 @@
   }
 }
 .calc-active {
-  border: 2px solid #039900;
+  transition-duration: 0.2s;
+  transform: scale(1.2);
 }
 
 .time-calc {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding: 36px 0;
+  max-width: none;
   margin: 0 auto;
 }
 .time-calc__title {
@@ -336,14 +347,6 @@
   text-align: center;
   color: #000000;
   margin: 0 0 38px 0;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 37px;
-}
-.time-calc__body {
-  justify-content: center;
-  gap: 33px;
-  flex-wrap: wrap;
 }
 
 @media (max-width: 490px) {
@@ -352,7 +355,7 @@
   }
 }
 .dino-game {
-  margin-bottom: 35px;
+  padding: 36px 0;
 }
 .dino-game__title {
   font-weight: 400;
@@ -360,7 +363,6 @@
   text-align: center;
   color: #000000;
   margin: 0 0 38px 0;
-  text-align: center;
 }
 .dino-game__wrapped {
   max-width: 720px;
@@ -825,14 +827,16 @@ li {
   color: #000000;
   margin: 0;
 }
+.input-action--center {
+  justify-content: center;
+  gap: 33px;
+  flex-wrap: wrap;
+}
 .input-action__input--narrow {
   width: 150px;
 }
-.input-action__time-input {
+.input-action__input--time {
   width: 150px;
-}
-.input-action--center {
-  justify-content: center;
 }
 
 .decor-line {

@@ -2,11 +2,10 @@
 @use "../utils/variables" as *;
 
 .dino-game {
-  margin-bottom: 35px;
+  padding: 36px 0;
 
   &__title {
     @include title;
-    text-align: center;
   }
 
   &__wrapped {
