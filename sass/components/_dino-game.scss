@@ -23,9 +23,9 @@
     transition-duration: 1s;
   }
 
-  &__svg {
-    max-width: 50px;
-    max-height: 50px;
+  &__dino {
+    max-width: 80px;
+    max-height: 80px;
     position: absolute;
     bottom: 0;
     left: 30px;
@@ -62,13 +62,12 @@
     animation-duration: 0.5s;
   }
 
-  &__cactus-active {
-    animation-name: cactus;
-    animation-duration: 2.5s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-  }
+}
 
+.dino-cactus-active {
+  animation-name: cactus;
+  animation-duration: 2.5s;
+  animation-direction: normal;
 }
 
 @keyframes jump {

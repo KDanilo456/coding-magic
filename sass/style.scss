@@ -1,18 +1,18 @@
-@use "./components/header";
-@use "./components/leap-calculator";
-@use "./components/guess-number";
-@use "./components/roshambo";
-@use "./components/calс.scss";
-@use "./components/time-calculator";
-@use "./components/dino-game";
-@use "./components/football";
-@use "./components/max-number";
-@use "./components/team";
-@use "./components/scientists";
-@use "./components/footer";
+@use "components/header";
+@use "components/leap-calculator";
+@use "components/guess-number";
+@use "components/roshambo";
+@use "components/calс.scss";
+@use "components/time-calculator";
+@use "components/dino-game";
+@use "components/football";
+@use "components/max-number";
+@use "components/team";
+@use "components/scientists";
+@use "components/footer";
 
-@use "./utils/mixin" as *;
-@use "./utils/variables" as *;
+@use "utils/mixin" as *;
+@use "utils/variables" as *;
 
 .container {
   max-width: 1090px;
@@ -125,10 +125,10 @@ li {
   transform: translate(-50%, -50%);
   z-index: 110;
   display: none;
+}
 
-  &--active {
-    display: block;
-  }
+.modal-active {
+  display: block;
 }
 
 .modal {

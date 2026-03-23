@@ -71,7 +71,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  left: 55%;
+  left: 45%;
   padding: 15px;
   overflow: auto;
   z-index: 100;
@@ -377,9 +377,9 @@
   position: relative;
   transition-duration: 1s;
 }
-.dino-game__svg {
-  max-width: 50px;
-  max-height: 50px;
+.dino-game__dino {
+  max-width: 80px;
+  max-height: 80px;
   position: absolute;
   bottom: 0;
   left: 30px;
@@ -415,11 +415,11 @@
   animation-name: jump;
   animation-duration: 0.5s;
 }
-.dino-game__cactus-active {
+
+.dino-cactus-active {
   animation-name: cactus;
   animation-duration: 2.5s;
   animation-direction: normal;
-  animation-iteration-count: infinite;
 }
 
 @keyframes jump {
@@ -858,7 +858,8 @@ li {
   z-index: 110;
   display: none;
 }
-.modal-wrapped--active {
+
+.modal-active {
   display: block;
 }
 

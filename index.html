@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <!-- <header class="header container">
+    <header class="header container">
       <a href="#" class="header__logo">
         <svg class="header__logo-icon" width="95" height="39">
           <use href="/symbols.svg#logo"></use>
@@ -27,7 +27,7 @@
 
       <nav class="nav nav--desktop">
         <ul class="nav__list">
-          <li class="nav__item nav__item-dropdown" id="openMenu">
+          <li class="nav__item nav__item-dropdown js-open-dropdown">
             <a href="#" class="nav__link"
               >Інтерактив
               <svg width="10" height="6" class="nav__link-icon">
@@ -35,7 +35,7 @@
               </svg>
             </a>
 
-            <div class="nav__dropdown" id="dropdown">
+            <div class="nav__dropdown js-dropdown">
               <a href="#" class="nav__dropdown-link" data-sort="numerical"
                 >Числовий</a
               >
@@ -65,8 +65,8 @@
           </div>
         </button>
 
-        <a href="#" class="header__user" id="open-modal" data-action="regist"
-          >Вітаємо, <span id="username">User!</span></a
+        <a href="#" class="header__user"
+          >Вітаємо, <span class="js-username">User!</span></a
         >
 
         <button class="burger-btn js-open-burger">
@@ -77,270 +77,278 @@
       </div>
     </header>
 
-    <div class="burger js-burger-menu">
-      <button class="theme-switcher theme-switcher--mobile">
-        <div class="theme-switcher__icon-wrapped">
-          <svg width="16" height="15" class="header__icon">
-            <use href="/symbols.svg#sun"></use>
-          </svg>
-        </div>
-      </button>
-
-      <button class="burger__btn-close js-close-burger">X</button>
-      <nav class="nav nav--mobile">
-        <ul class="nav__list nav__list--mobile">
-          <li class="nav__item nav__item-dropdown" id="openMenu">
-            <a href="#" class="nav__link"
-              >Інтерактив
-              <svg width="10" height="6" class="nav__link-icon">
-                <use href="/symbols.svg#arrow-down"></use>
-              </svg>
-            </a>
-
-            <div class="nav__dropdown nav__dropdown--mobile" id="dropdown">
-              <a href="#" class="nav__dropdown-link" data-sort="numerical"
-                >Числовий</a
-              >
-              <a href="#" class="nav__dropdown-link" data-sort="game"
-                >Ігровий</a
-              >
-              <a href="#" class="nav__dropdown-link" data-sort="acquaintance"
-                >Ознайомчий</a
-              >
-            </div>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Наша команда</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    
-    <div class="modal-wrapped modal-wrapped--active" data-modal="main">
+    <div class="modal-wrapped modal-active" data-modal="greeting">
       <div class="modal modal--wide">
-        <svg class="modal__close" data-action="close" width="16" height="16"><use href="/symbols.svg#close"></use></svg>
-        
+        <svg
+          class="modal__close js-modal-close"
+          data-action="greeting"
+          width="16"
+          height="16"
+        >
+          <use href="/symbols.svg#close"></use>
+        </svg>
+
         <p class="modal__text">
-          Привіт! <br>
-          Ви потрапили на сайт інтерактивних ігор та завдань <br>
-          Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br>
+          Привіт! <br />
+          Ви потрапили на сайт інтерактивних ігор та завдань <br />
+          Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br />
           Бажаємо Вам гарно провести час!
         </p>
-        
+
         <form class="modal__form">
-          <label for="input-name" class="modal__label">Введіть своє ім’я:</label>
-          <input type="text" id="input-name" class="modal__input" placeholder="Ваше ім’я...">
-          <button type="button" class="modal__btn" id="modal-btn">Зберегти</button>
+          <label for="input-name" class="modal__label"
+            >Введіть своє ім’я:</label
+          >
+          <input
+            type="text"
+            id="input-name"
+            class="modal__input js-username-input"
+            placeholder="Ваше ім’я..."
+          />
+          <button type="button" class="modal__btn js-btn-save">Зберегти</button>
         </form>
 
         <ul class="modal__list modal__list--wide">
           <li class="modal__item">
-            <svg class="modal__icon" width="30" height="30"><use href="/symbols.svg#sword"></use></svg>
+            <svg class="modal__icon" width="30" height="30">
+              <use href="/symbols.svg#sword"></use>
+            </svg>
           </li>
           <li class="modal__item">
-            <svg class="modal__icon" width="30" height="30"><use href="/symbols.svg#game-development"></use></svg>
+            <svg class="modal__icon" width="30" height="30">
+              <use href="/symbols.svg#game-development"></use>
+            </svg>
           </li>
           <li class="modal__item">
-            <svg class="modal__icon modal__icon--left" width="30" height="30"><use href="/symbols.svg#puzzle"></use></svg>
+            <svg class="modal__icon modal__icon--left" width="30" height="30">
+              <use href="/symbols.svg#puzzle"></use>
+            </svg>
           </li>
           <li class="modal__item">
-            <svg class="modal__icon modal__icon--right" width="30" height="30"><use href="/symbols.svg#tic-tac-toe"></use></svg>
+            <svg class="modal__icon modal__icon--right" width="30" height="30">
+              <use href="/symbols.svg#tic-tac-toe"></use>
+            </svg>
           </li>
         </ul>
       </div>
-    </div> -->
+    </div>
 
-    <main class="main">
-      <div class="wrapper">
-        <div class="container">
-          <h1 class="title">Популярні інетрактивні ігри</h1>
+    <div class="js-main-page">
+      <main class="main">
+        <div class="wrapper">
+          <div class="container">
+            <h1 class="title">Популярні інетрактивні ігри</h1>
 
-          <div class="decor-line"></div>
+            <div class="decor-line"></div>
 
-          <section class="leap-calc" data-name="numerical">
-            <h2 class="leap-calc__title">Перевір в який рік ти народився</h2>
+            <section class="leap-calc" data-name="numerical">
+              <h2 class="leap-calc__title">Перевір в який рік ти народився</h2>
 
-            <div class="input-action">
-              <form class="input-action__form">
-                <input
-                  type="text"
-                  class="input-action__input js-leap-input"
-                  placeholder="Введіть рік народження"
-                />
+              <div class="input-action">
+                <form class="input-action__form">
+                  <input
+                    type="text"
+                    class="input-action__input js-leap-input"
+                    placeholder="Введіть рік народження"
+                  />
 
-                <button class="input-action__btn js-leap-btn" type="button">
-                  <svg width="16" height="16" class="input-action__icon">
-                    <use href="/symbols.svg#dandruff"></use>
-                  </svg>
-                </button>
-              </form>
+                  <button class="input-action__btn js-leap-btn" type="button">
+                    <svg width="16" height="16" class="input-action__icon">
+                      <use href="/symbols.svg#dandruff"></use>
+                    </svg>
+                  </button>
+                </form>
 
-              <p class="input-action__result js-leap-result">введіть число</p>
-            </div>
-          </section>
-
-          <div class="decor-line"></div>
-
-          <section class="guess-number" data-name="numerical">
-            <h2 class="guess-number__title">
-              Вгадай число, яке загадав комп’ютер
-            </h2>
-
-            <div class="input-action">
-              <form class="input-action__form">
-                <input
-                  type="text"
-                  class="input-action__input input-action__input--narrow js-guess-input"
-                  placeholder="Введіть число"
-                />
-
-                <button class="input-action__btn js-guess-btn" type="button">
-                  <svg width="16" height="16" class="input-action__icon">
-                    <use href="/symbols.svg#dandruff"></use>
-                  </svg>
-                </button>
-              </form>
-
-              <p class="input-action__result js-guess-result">введіть число</p>
-            </div>
-          </section>
-
-          <div class="decor-line"></div>
-          <section class="roshambo" data-name="game">
-            <h2 class="roshambo__title">Камінь - ножиці - папір</h2>
-
-            <div class="roshambo__btns">
-              <button class="roshambo__btn js-roshambo-btn" data-action="stone">
-                <svg width="40" height="40" class="roshambo__icon">
-                  <use href="/symbols.svg#stone"></use>
-                </svg>
-              </button>
-              <button
-                class="roshambo__btn js-roshambo-btn"
-                data-action="scissors"
-              >
-                <svg width="40" height="40" class="roshambo__icon">
-                  <use href="/symbols.svg#scissors"></use>
-                </svg>
-              </button>
-              <button class="roshambo__btn js-roshambo-btn" data-action="paper">
-                <svg width="40" height="40" class="roshambo__icon">
-                  <use href="/symbols.svg#paper"></use>
-                </svg>
-              </button>
-            </div>
-
-            <span class="roshambo__calc">
-              Рахунок: <br />
-              Комп’ютер -
-              <span class="js-roshambo-computer">0</span>
-              <br />
-              Ви -
-              <span class="js-roshambo-user">0</span>
-            </span>
-
-            <p class="roshambo__result js-roshambo-result">
-              Клацніть на кнопку зверху
-            </p>
-
-            <div class="roshambo__btns">
-              <button class="roshambo__btn-action js-roshambo-result-btn">
-                Варіант комп’ютера
-              </button>
-              <button class="roshambo__btn-action js-roshambo-reset">
-                Збити рахунок
-              </button>
-            </div>
-          </section>
-
-          <div class="decor-line"></div>
-
-          <section class="calc" data-name="numerical">
-            <h2 class="calc__title">Калькулятор</h2>
-
-            <form class="calc__form">
-              <input
-                type="text"
-                placeholder="Введіть число"
-                class="calc__input js-first-input"
-                data-action="first-value"
-              />
-              <div class="calc__operations js-calc-operations">
-                <button class="calc__btn js-calc-operation" type="button">+</button>
-                <button class="calc__btn js-calc-operation" type="button">*</button>
-                <button class="calc__btn js-calc-operation" type="button">-</button>
-                <button class="calc__btn js-calc-operation" type="button">/</button>
+                <p class="input-action__result js-leap-result">введіть число</p>
               </div>
-              <input
-                type="text"
-                placeholder="Введіть число"
-                class="calc__input js-second-input"
-                data-action="second-value"
-              />
-              <button class="calc__btn js-btn-total" type="button">=</button>
-              <div class="calc__result">
-                <span class="calc__result-text js-calc-result">Результат</span>
+            </section>
+
+            <div class="decor-line"></div>
+
+            <section class="guess-number" data-name="numerical">
+              <h2 class="guess-number__title">
+                Вгадай число, яке загадав комп’ютер
+              </h2>
+
+              <div class="input-action">
+                <form class="input-action__form">
+                  <input
+                    type="text"
+                    class="input-action__input input-action__input--narrow js-guess-input"
+                    placeholder="Введіть число"
+                  />
+
+                  <button class="input-action__btn js-guess-btn" type="button">
+                    <svg width="16" height="16" class="input-action__icon">
+                      <use href="/symbols.svg#dandruff"></use>
+                    </svg>
+                  </button>
+                </form>
+
+                <p class="input-action__result js-guess-result">
+                  введіть число
+                </p>
               </div>
-              <button class="calc__btn js-calc-reset" type="button">Скинути</button>
-            </form> 
-          </section>
+            </section>
 
-          <div class="decor-line"></div>
+            <div class="decor-line"></div>
+            <section class="roshambo" data-name="game">
+              <h2 class="roshambo__title">Камінь - ножиці - папір</h2>
 
-          <section class="time-calc" data-name="numerical">
-            <h2 class="time-calc__title">Калькулятор часу</h2>
-
-            <div class="input-action input-action--center">
-              <form class="input-action__form">
-                <input
-                  type="text"
-                  class="input-action__input input-action__input--time js-time-input"
-                  placeholder="Введіть число"
-                />
-
-                <button class="input-action__btn js-time-btn" type="button">
-                  <svg width="16" height="16" class="input-action__icon">
-                    <use href="/symbols.svg#dandruff"></use>
+              <div class="roshambo__btns">
+                <button
+                  class="roshambo__btn js-roshambo-btn"
+                  data-action="stone"
+                >
+                  <svg width="40" height="40" class="roshambo__icon">
+                    <use href="/symbols.svg#stone"></use>
                   </svg>
                 </button>
+                <button
+                  class="roshambo__btn js-roshambo-btn"
+                  data-action="scissors"
+                >
+                  <svg width="40" height="40" class="roshambo__icon">
+                    <use href="/symbols.svg#scissors"></use>
+                  </svg>
+                </button>
+                <button
+                  class="roshambo__btn js-roshambo-btn"
+                  data-action="paper"
+                >
+                  <svg width="40" height="40" class="roshambo__icon">
+                    <use href="/symbols.svg#paper"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <span class="roshambo__calc">
+                Рахунок: <br />
+                Комп’ютер -
+                <span class="js-roshambo-computer">0</span>
+                <br />
+                Ви -
+                <span class="js-roshambo-user">0</span>
+              </span>
+
+              <p class="roshambo__result js-roshambo-result">
+                Клацніть на кнопку зверху
+              </p>
+
+              <div class="roshambo__btns">
+                <button class="roshambo__btn-action js-roshambo-result-btn">
+                  Варіант комп’ютера
+                </button>
+                <button class="roshambo__btn-action js-roshambo-reset">
+                  Збити рахунок
+                </button>
+              </div>
+            </section>
+
+            <div class="decor-line"></div>
+
+            <section class="calc" data-name="numerical">
+              <h2 class="calc__title">Калькулятор</h2>
+
+              <form class="calc__form">
+                <input
+                  type="text"
+                  placeholder="Введіть число"
+                  class="calc__input js-first-input"
+                  data-action="first-value"
+                />
+                <div class="calc__operations js-calc-operations">
+                  <button class="calc__btn js-calc-operation" type="button">
+                    +
+                  </button>
+                  <button class="calc__btn js-calc-operation" type="button">
+                    *
+                  </button>
+                  <button class="calc__btn js-calc-operation" type="button">
+                    -
+                  </button>
+                  <button class="calc__btn js-calc-operation" type="button">
+                    /
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Введіть число"
+                  class="calc__input js-second-input"
+                  data-action="second-value"
+                />
+                <button class="calc__btn js-btn-total" type="button">=</button>
+                <div class="calc__result">
+                  <span class="calc__result-text js-calc-result"
+                    >Результат</span
+                  >
+                </div>
+                <button class="calc__btn js-calc-reset" type="button">
+                  Скинути
+                </button>
               </form>
+            </section>
 
-              <svg width="100" height="1" class="time-calc__icon">
-                <use href="/symbols.svg#line"></use>
-              </svg>
+            <div class="decor-line"></div>
 
-              <p class="input-action__result js-time-result">введіть число</p>
-            </div>
-          </section>
+            <section class="time-calc" data-name="numerical">
+              <h2 class="time-calc__title">Калькулятор часу</h2>
 
-          
-          <div class="decor-line"></div>
+              <div class="input-action input-action--center">
+                <form class="input-action__form">
+                  <input
+                    type="text"
+                    class="input-action__input input-action__input--time js-time-input"
+                    placeholder="Введіть число"
+                  />
 
-          <section class="dino-game" data-name="game">
-            <h2 class="dino-game__title">Google динозавр</h2>
+                  <button class="input-action__btn js-time-btn" type="button">
+                    <svg width="16" height="16" class="input-action__icon">
+                      <use href="/symbols.svg#dandruff"></use>
+                    </svg>
+                  </button>
+                </form>
 
-            <div class="dino-game__wrapped">
-              <div class="dino-game__body js-dino-body">
-                <span class="dino-game__score js-dino-score">0</span>
-                <svg class="dino-game__svg js-dino" width="50" height="50">
+                <svg width="100" height="1" class="time-calc__icon">
+                  <use href="/symbols.svg#line"></use>
+                </svg>
+
+                <p class="input-action__result js-time-result">введіть число</p>
+              </div>
+            </section>
+
+            <div class="decor-line"></div>
+
+            <section class="dino-game" data-name="game">
+              <h2 class="dino-game__title">Google динозавр</h2>
+
+              <div class="dino-game__wrapped">
+                <div class="dino-game__body js-dino-body">
+                  <span class="dino-game__score js-dino-score">0</span>
+                  <!-- <svg class="dino-game__svg js-dino" width="50" height="50">
                   <use href="/symbols.svg#dino"></use>
-                </svg>
+                </svg> -->
 
-                <img
-                  src="/img/cactus.png"
-                  alt="cactus"
-                  class="dino-game__cactus js-cactus"
-                />
+                  <img
+                    src="img/dino.png"
+                    alt="dino"
+                    class="dino-game__dino js-dino"
+                  />
 
-                <button type="button" class="dino-game__btn js-dino-btn">Почати</button>
+                  <img
+                    src=""
+                    alt="cactus"
+                    class="dino-game__cactus js-cactus"
+                  />
+
+                  <button type="button" class="dino-game__btn js-dino-btn">
+                    Почати
+                  </button>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <!--
+            <!--
 
           <div class="decor-line"></div>
           <section class="football" data-name="game">
@@ -355,304 +363,362 @@
                 id="ball"
               />
             </div>
-          </section>
+          </section> -->
 
-          <div class="decor-line"></div>
-          <section class="max-number" data-name="numerical">
-            <h2 class="max-number__title">Введіть 3 числа</h2>
-            <div class="max-number__inputs">
-              <input class="max-number__input" placeholder="Введіть число" />
-              <input class="max-number__input" placeholder="Введіть число" />
-              <input class="max-number__input" placeholder="Введіть число" />
-            </div>
-            <p class="max-number__result">Заповніть 3 поля зверху</p>
-          </section>
+            <div class="decor-line"></div>
+            <section class="max-number" data-name="numerical">
+              <h2 class="max-number__title">Введіть 3 числа</h2>
+              <div class="max-number__inputs">
+                <input
+                  class="max-number__input js-max-input"
+                  data-action="first-value"
+                  placeholder="Введіть число"
+                />
+                <input
+                  class="max-number__input js-max-input"
+                  data-action="second-value"
+                  placeholder="Введіть число"
+                />
+                <input
+                  class="max-number__input js-max-input"
+                  data-action="third-value"
+                  placeholder="Введіть число"
+                />
+              </div>
+              <p class="max-number__result js-max-result">
+                Заповніть 3 поля зверху
+              </p>
+            </section>
 
-          <div class="decor-line"></div>
-          <section class="team" data-name="acquaintance">
-            <h2 class="team__title">Наша команда</h2>
+            <div class="decor-line"></div>
 
-            <div class="team__body">
-              <button type="button" class="team__btn js-btn-left">
-                <svg width="52" height="101">
-                  <use href="/symbols.svg#arrow-left"></use>
-                </svg>
-              </button>
-              <ul class="team__list">
-                <li class="team__item js-team-item">
-                  <img src="/img/human.jpg" alt="worker" class="team__img" />
-                  <h3 class="team__name">Кіндій Данило</h3>
-                  <p class="team__text">Frontend Developer</p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/human-women.jpg"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Анастасія Лупій</h3>
-                  <p class="team__text">Frontend Teacher</p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/worker-men.png"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Demo member</h3>
-                  <p class="team__text">
-                    Card added to demonstrate slider functionality.
-                  </p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/worker-women.png"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Demo member</h3>
-                  <p class="team__text">
-                    Card added to demonstrate slider functionality.
-                  </p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/worker-men.png"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Demo member</h3>
-                  <p class="team__text">
-                    Card added to demonstrate slider functionality.
-                  </p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/worker-women.png"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Demo member</h3>
-                  <p class="team__text">
-                    Card added to demonstrate slider functionality.
-                  </p>
-                </li>
-                <li class="team__item js-team-item">
-                  <img
-                    src="/img/worker-men.png"
-                    alt="worker"
-                    class="team__img"
-                  />
-                  <h3 class="team__name">Demo member</h3>
-                  <p class="team__text">
-                    Card added to demonstrate slider functionality.
-                  </p>
-                </li>
+            <section class="team" data-name="acquaintance">
+              <h2 class="team__title">Наша команда</h2>
+
+              <div class="team__body">
+                <button type="button" class="team__btn js-btn-left">
+                  <svg width="52" height="101">
+                    <use href="/symbols.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <ul class="team__list">
+                  <li class="team__item js-team-item">
+                    <img src="/img/human.jpg" alt="worker" class="team__img" />
+                    <h3 class="team__name">Кіндій Данило</h3>
+                    <p class="team__text">Frontend Developer</p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/human-women.jpg"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Анастасія Лупій</h3>
+                    <p class="team__text">Frontend Teacher</p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/worker-men.png"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Demo member</h3>
+                    <p class="team__text">
+                      Card added to demonstrate slider functionality.
+                    </p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/worker-women.png"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Demo member</h3>
+                    <p class="team__text">
+                      Card added to demonstrate slider functionality.
+                    </p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/worker-men.png"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Demo member</h3>
+                    <p class="team__text">
+                      Card added to demonstrate slider functionality.
+                    </p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/worker-women.png"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Demo member</h3>
+                    <p class="team__text">
+                      Card added to demonstrate slider functionality.
+                    </p>
+                  </li>
+                  <li class="team__item js-team-item">
+                    <img
+                      src="/img/worker-men.png"
+                      alt="worker"
+                      class="team__img"
+                    />
+                    <h3 class="team__name">Demo member</h3>
+                    <p class="team__text">
+                      Card added to demonstrate slider functionality.
+                    </p>
+                  </li>
+                </ul>
+                <button type="button" class="team__btn js-btn-right">
+                  <svg width="52" height="101">
+                    <use href="/symbols.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="team__pagination">
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+                <div class="team__indicator js-indicator"></div>
+              </div>
+            </section>
+
+            <div class="decor-line"></div>
+            <section class="scientists" data-name="acquaintance">
+              <h2 class="scientists__title">Обери вченого/их</h2>
+
+              <ul class="scientists__list js-scientists">
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
+                <li class="scientists__item js-scientist"></li>
               </ul>
-              <button type="button" class="team__btn js-btn-right">
-                <svg width="52" height="101">
-                  <use href="/symbols.svg#arrow-right"></use>
-                </svg>
-              </button>
-            </div>
 
-            <div class="team__pagination">
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-              <div class="team__indicator js-indicator"></div>
-            </div>
-          </section>
-
-          <div class="decor-line"></div>
-          <section class="scientists" data-name="acquaintance">
-            <h2 class="scientists__title">Обери вченого/их</h2>
-
-            <ul class="scientists__list js-scientists">
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-              <li class="scientists__item js-scientist"></li>
-            </ul>
-
-            <div class="scientists__btns">
-              <ul class="scientists__btn-list">
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn scientists__btn--right js-scientists-btn"
-                    data-action="show-19-century"
-                  >
-                    Які вчені народилися в 19 ст.
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn js-scientists-btn"
-                    data-action="find-birth-year"
-                  >
-                    Знайти рік народження Albert Einstein
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn scientists__btn--right js-scientists-btn"
-                    data-action="sort-alphabet"
-                  >
-                    Відсортувати вчених за алфавітом
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn js-scientists-btn"
-                    data-action="find-surname-letter"
-                  >
-                    Знайти вчених, прізвища яких починаються на на літеру “С”
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn scientists__btn--right js-scientists-btn"
-                    data-action="sort-lived-years"
-                  >
-                    Відсортувати вчених за кількістю прожитих років
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn js-scientists-btn"
-                    data-action="delete-name-letter"
-                  >
-                    Видалити всіх вчених, ім’я яких починається на “А”
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn scientists__btn--right js-scientists-btn"
-                    data-action="find-latest-born"
-                  >
-                    Знайти вченого, який народився найпізніше
-                  </button>
-                </li>
-                <li class="scientists__btn-item">
-                  <button
-                    class="scientists__btn scientists__btn--higher js-scientists-btn"
-                    data-action="find-extreme-lifespans"
-                  >
-                    Знайти вченого, який прожив найдовше і вченого, <br />
-                    який прожив найменше
-                  </button>
-                </li>
-              </ul>
-              <button
-                class="scientists__btn scientists__btn--center js-scientists-btn"
-                data-action="find-name-surname-letter"
-              >
-                Знайти вчених, в яких співпадають перші літери імені і прізвища
-              </button>
-            </div>
-          </section>
-        </div>
-        --></div>
-      </div>
-    </main>
-
-    <!-- <footer class="footer">
-      <div class="container footer__wrapped">
-        <a href="#" class="footer__logo">
-          <svg class="footer__logo-icon" width="165" height="70">
-            <use href="/symbols.svg#logo"></use>
-          </svg>
-        </a>
-
-        <span class="footer__info">
-          Тел: +38 (123) 456 78 90 <br />
-          E-Mail: codingmagic@gmail.com <br />
-          Facebook: CodingMagic <br />
-          Twitter: CodingMagic <br />
-          Instagram: CodingMagic
-        </span>
-
-        <form class="footer__form">
-          <input
-            type="text"
-            placeholder="Ваша ел. адреса..."
-            class="footer__input"
-          />
-          <button
-            type="button"
-            class="footer__btn"
-            id="open-modal"
-            data-action="subscribe"
-          >
-            Підписатись
-          </button>
-          <span class="footer__hint"
-            >*Підписавшись, Ви зможете отримувати інформацію про новинки на
-            сайті</span
-          >
-        </form>
-
-        <div class="modal-wrapped" data-modal="subscribe">
-          <div class="modal">
-            <svg
-              class="modal__close"
-              data-action="close"
-              width="16"
-              height="16"
-            >
-              <use href="/symbols.svg#close"></use>
-            </svg>
-
-            <h2 class="modal__title">Дякую за підписку!</h2>
-
-            <ul class="modal__list">
-              <li class="modal__item">
-                <svg class="modal__icon" width="30" height="30">
-                  <use href="/symbols.svg#sword"></use>
-                </svg>
-              </li>
-              <li class="modal__item">
-                <svg class="modal__icon" width="30" height="30">
-                  <use href="/symbols.svg#game-development"></use>
-                </svg>
-              </li>
-              <li class="modal__item">
-                <svg
-                  class="modal__icon modal__icon--left"
-                  width="30"
-                  height="30"
+              <div class="scientists__btns">
+                <ul class="scientists__btn-list">
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn scientists__btn--right js-scientists-btn"
+                      data-action="show-19-century"
+                    >
+                      Які вчені народилися в 19 ст.
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn js-scientists-btn"
+                      data-action="find-birth-year"
+                    >
+                      Знайти рік народження Albert Einstein
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn scientists__btn--right js-scientists-btn"
+                      data-action="sort-alphabet"
+                    >
+                      Відсортувати вчених за алфавітом
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn js-scientists-btn"
+                      data-action="find-surname-letter"
+                    >
+                      Знайти вчених, прізвища яких починаються на на літеру “С”
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn scientists__btn--right js-scientists-btn"
+                      data-action="sort-lived-years"
+                    >
+                      Відсортувати вчених за кількістю прожитих років
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn js-scientists-btn"
+                      data-action="delete-name-letter"
+                    >
+                      Видалити всіх вчених, ім’я яких починається на “А”
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn scientists__btn--right js-scientists-btn"
+                      data-action="find-latest-born"
+                    >
+                      Знайти вченого, який народився найпізніше
+                    </button>
+                  </li>
+                  <li class="scientists__btn-item">
+                    <button
+                      class="scientists__btn scientists__btn--higher js-scientists-btn"
+                      data-action="find-extreme-lifespans"
+                    >
+                      Знайти вченого, який прожив найдовше і вченого, <br />
+                      який прожив найменше
+                    </button>
+                  </li>
+                </ul>
+                <button
+                  class="scientists__btn scientists__btn--center js-scientists-btn"
+                  data-action="find-name-surname-letter"
                 >
-                  <use href="/symbols.svg#puzzle"></use>
-                </svg>
-              </li>
-              <li class="modal__item">
-                <svg
-                  class="modal__icon modal__icon--right"
-                  width="30"
-                  height="30"
-                >
-                  <use href="/symbols.svg#tic-tac-toe"></use>
-                </svg>
-              </li>
-            </ul>
+                  Знайти вчених, в яких співпадають перші літери імені і
+                  прізвища
+                </button>
+              </div>
+            </section>
           </div>
         </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__wrapped">
+          <a href="#" class="footer__logo">
+            <svg class="footer__logo-icon" width="165" height="70">
+              <use href="/symbols.svg#logo"></use>
+            </svg>
+          </a>
+
+          <span class="footer__info">
+            Тел: +38 (123) 456 78 90 <br />
+            E-Mail: codingmagic@gmail.com <br />
+            Facebook: CodingMagic <br />
+            Twitter: CodingMagic <br />
+            Instagram: CodingMagic
+          </span>
+
+          <form class="footer__form">
+            <input
+              type="text"
+              placeholder="Ваша ел. адреса..."
+              class="footer__input js-email-input"
+            />
+            <button
+              type="button"
+              class="footer__btn js-open-modal"
+              data-action="subscribe"
+            >
+              Підписатись
+            </button>
+            <span class="footer__hint"
+              >*Підписавшись, Ви зможете отримувати інформацію про новинки на
+              сайті</span
+            >
+          </form>
+
+          <div class="modal-wrapped js-modal" data-modal="subscribe">
+            <div class="modal">
+              <svg
+                class="modal__close js-modal-close"
+                data-action="subscribe"
+                width="16"
+                height="16"
+              >
+                <use href="/symbols.svg#close"></use>
+              </svg>
+
+              <h2 class="modal__title">Дякую за підписку!</h2>
+
+              <ul class="modal__list">
+                <li class="modal__item">
+                  <svg class="modal__icon" width="30" height="30">
+                    <use href="/symbols.svg#sword"></use>
+                  </svg>
+                </li>
+                <li class="modal__item">
+                  <svg class="modal__icon" width="30" height="30">
+                    <use href="/symbols.svg#game-development"></use>
+                  </svg>
+                </li>
+                <li class="modal__item">
+                  <svg
+                    class="modal__icon modal__icon--left"
+                    width="30"
+                    height="30"
+                  >
+                    <use href="/symbols.svg#puzzle"></use>
+                  </svg>
+                </li>
+                <li class="modal__item">
+                  <svg
+                    class="modal__icon modal__icon--right"
+                    width="30"
+                    height="30"
+                  >
+                    <use href="/symbols.svg#tic-tac-toe"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="burger-menu-wrapper">
+      <div class="burger js-burger-menu">
+        <button class="theme-switcher theme-switcher--mobile">
+          <div class="theme-switcher__icon-wrapped">
+            <svg width="16" height="15" class="header__icon">
+              <use href="/symbols.svg#sun"></use>
+            </svg>
+          </div>
+        </button>
+
+        <button class="burger__btn-close js-close-burger">X</button>
+        <nav class="nav nav--mobile">
+          <ul class="nav__list nav__list--mobile">
+            <li class="nav__item nav__item-dropdown js-open-dropdown">
+              <a href="#" class="nav__link"
+                >Інтерактив
+                <svg width="10" height="6" class="nav__link-icon">
+                  <use href="/symbols.svg#arrow-down"></use>
+                </svg>
+              </a>
+
+              <div class="nav__dropdown nav__dropdown--mobile js-dropdown">
+                <a href="#" class="nav__dropdown-link" data-sort="numerical"
+                  >Числовий</a
+                >
+                <a href="#" class="nav__dropdown-link" data-sort="game"
+                  >Ігровий</a
+                >
+                <a href="#" class="nav__dropdown-link" data-sort="acquaintance"
+                  >Ознайомчий</a
+                >
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Наша команда</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </footer> -->
+    </div>
 
-    <!-- <script type="module" src="script.js"></script> -->
-
+    <script type="module" src="js/header.js"></script>
     <script type="module" src="js/leap-calc.js"></script>
     <script type="module" src="js/guess-num.js"></script>
     <script type="module" src="js/roshambo.js"></script>
@@ -660,5 +726,12 @@
     <script type="module" src="js/time-calc.js"></script>
     <script type="module" src="js/dino.js"></script>
 
+    <script type="module" src="js/max-num.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/scientists.js"></script>
+    <script type="module" src="js/footer.js"></script>
+
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/burger-menu.js"></script>
   </body>
 </html>
