@@ -105,7 +105,7 @@
             class="modal__input js-username-input"
             placeholder="Ваше ім’я..."
           />
-          <button type="button" class="modal__btn js-btn-save">Зберегти</button>
+          <button type="button" class="modal__btn js-btn-save" data-action="greeting">Зберегти</button>
         </form>
 
         <ul class="modal__list modal__list--wide">
@@ -348,24 +348,23 @@
               </div>
             </section>
 
-            <!--
+            <div class="decor-line"></div>
 
-          <div class="decor-line"></div>
-          <section class="football" data-name="game">
-            <h2 class="football__title">Футбол</h2>
+            <section class="football" data-name="game">
+              <h2 class="football__title">Футбол</h2>
 
-            <div class="football__body" id="football-area">
-              <img
-                src="/img/ball.png"
-                srcset="/img/ball.png 1x, /img/ball@2.png 2x"
-                alt="ball"
-                class="football__img"
-                id="ball"
-              />
-            </div>
-          </section> -->
+              <div class="football__body js-football-area">
+                <img
+                  src="/img/ball.png"
+                  srcset="/img/ball.png 1x, /img/ball@2.png 2x"
+                  alt="ball"
+                  class="football__img js-football-ball"
+                />
+              </div>
+            </section>
 
             <div class="decor-line"></div>
+
             <section class="max-number" data-name="numerical">
               <h2 class="max-number__title">Введіть 3 числа</h2>
               <div class="max-number__inputs">
@@ -614,7 +613,7 @@
             />
             <button
               type="button"
-              class="footer__btn js-open-modal"
+              class="footer__btn js-btn-subscribe"
               data-action="subscribe"
             >
               Підписатись
@@ -725,13 +724,13 @@
     <script type="module" src="js/calc.js"></script>
     <script type="module" src="js/time-calc.js"></script>
     <script type="module" src="js/dino.js"></script>
-
+    <script type="module" src="js/football.js"></script>
     <script type="module" src="js/max-num.js"></script>
     <script type="module" src="js/slider.js"></script>
     <script type="module" src="js/scientists.js"></script>
     <script type="module" src="js/footer.js"></script>
 
-    <script type="module" src="js/modal.js"></script>
-    <script type="module" src="js/burger-menu.js"></script>
+    <!-- <script type="module" src="js/modal.js"></script> -->
+    <script type="module" src="js/burger-menu.js"></script> 
   </body>
 </html>

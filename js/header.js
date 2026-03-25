@@ -1,11 +1,10 @@
-import { initModals } from "./modal.js";
-
-initModals();
+import { initModals,closeModal } from "./modal.js";
 
 const usernameInput = document.querySelector(".js-username-input");
 const usernameSaveBtn = document.querySelector(".js-btn-save");
 const username = document.querySelector(".js-username");
-const modal = document.querySelector("div[data-modal='greeting'");
+
+initModals();
 
 usernameSaveBtn.addEventListener("click", () => {
   if (usernameInput.value.length === 0) {
@@ -13,7 +12,7 @@ usernameSaveBtn.addEventListener("click", () => {
     return;
   }
 
-  modal.classList.remove("modal-active");
+  closeModal(usernameSaveBtn.dataset.action)
 
   username.textContent = usernameInput.value;
 });

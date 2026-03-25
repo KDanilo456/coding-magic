@@ -92,24 +92,6 @@ btnCloseBurgerMenu.addEventListener("click", () => {
 
 
 
-let footbalArea = document.querySelector("#football-area");
-let ball = document.querySelector("#ball");
-
-footbalArea.addEventListener("click", (event) => {
-  let mouseX = event.pageX;
-  let mouseY = event.pageY;
-
-  let styles = ball.getBoundingClientRect();
-
-  let x = styles.left;
-  let y = styles.top;
-
-  let ballX = mouseX - x;
-  let ballY = mouseY - y;
-
-  ball.style.left = `${ballX + x}px`;
-  ball.style.top = `${ballY + y}px`;
-});
 
 
 

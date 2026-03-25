@@ -20,10 +20,13 @@
     border-radius: 37px;
     margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
   }
 
   &__img {
     position: absolute;
+    transition-duration: 0.2s;
   }
 }
 
