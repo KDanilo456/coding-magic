@@ -33,7 +33,7 @@ calcOperations.forEach((btnOperation) => {
 
     btnOperation.classList.add("calc-active");
 
-    operation = btnOperation.textContent;
+    operation = btnOperation.textContent.trim();
   });
 });
 
@@ -44,7 +44,7 @@ calcBtnTotal.addEventListener("click", () => {
 
   const validateFirstInput = validateInputs(calcFirstInput);
   const validateSecondInput = validateInputs(calcSecondInput);
-
+  
   if (!validateFirstInput && !validateSecondInput) {
     calcResult.textContent = "заповніть поля числами";
     return;
